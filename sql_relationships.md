@@ -8,7 +8,7 @@
 - Use JOIN to combine tables in a SELECT
 - Describe what it means for a database to be normalized
 
-## Introduction
+## Introduction (5/125)
 
 One of the key features of relational DBs is that they can represent relationships between rows in
 different tables.
@@ -22,7 +22,7 @@ use this information in a number of ways, such as:
 * Getting all books written by a given author
 * Searching for books based on attributes of the author (i.e. all books written by a Chinese author)
 
-## One-to-many
+## One-to-many (10/135)
 
 How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
@@ -89,7 +89,7 @@ SELECT * FROM books JOIN authors ON books.author_id = authors.id;
 SELECT * FROM books JOIN authors ON books.author_id = authors.id WHERE authors.nationality = 'United States of America';
 ```
 
-## EXERCISE: Books/Authors (One to Many)
+## EXERCISE: Books/Authors (15/150)
 
 See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
 exercise.
