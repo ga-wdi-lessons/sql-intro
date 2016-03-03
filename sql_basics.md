@@ -68,6 +68,7 @@ structure.
 
 Come up with an example ERD for an application that manages a library.
 
+**So now that we have our ERD, where do these entities get stored?**
 
 ## Databases (5/35)
 
@@ -141,6 +142,9 @@ While this is a bit technical, it's worth clarifying some terminology:
 
 ## Exploring Postgres (10/55)
 
+Note: We are learning this to be able to read it. We'll look stuff up when we want to write it!
+
+Spotlight search for Postgres
 Launch `Postgres.app` if you don't see the elephant in your menu bar.
 
 ### psql commands
@@ -234,7 +238,6 @@ Here are some common data types for SQL DBs:
 - Float
 - Text / VARCHAR
   - VARCHAR is short, TEXT is long
-  - VARCHAR is "CHARACTER VARYING"
 - NULL
 - Date
 - Time
@@ -363,7 +366,3 @@ DELETE FROM authors WHERE name = 'Adam B.';
 Complete the queries in `basic_queries.sql` in the library_sql repo.
 
 ## Break (10/115)
-
-## Screencasts:
-
-- ERDs WDI7 (Matt Scilipoti): https://youtu.be/IDnOMi9jHgo
