@@ -1,5 +1,11 @@
 # Databases
 
+## Learning Objectives
+- Cover ERDs, databases
+- Intro SQL basics
+
+## Framing
+
 This lesson is broken down into three parts:
 
 1. [Domain Modeling & ERDs](erd_domains.md)
