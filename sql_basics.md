@@ -25,7 +25,7 @@ When we quit them, any data / progress is lost! Right now, we can only store
 information in memory, which is wiped when a program is quit. We definitely
 need a way to fix this..
 
-## Enter Databases (5/35)
+## Enter Databases (5/10)
 
 A database is a tool for storing data. There are many ways to store data on a
 computer, such as writing to a text file, a binary file, etc. But databases
@@ -53,7 +53,7 @@ which is a set of properties that ensure data is reliably stored. You can read
 the wiki article for more info, but in short, a lot of the properties mentioned
 above make a database ACID complient.
 
-## What's a relational database? (10/45)
+## What's a relational database? (10/20)
 
 The most popular type of database is a **relational** database.
 
@@ -95,7 +95,7 @@ While this is a bit technical, it's worth clarifying some terminology:
   "Not Only SQL". Store data without using tables. More like 'big buckets'.
   We'll cover these later in the course.
 
-## Exploring Postgres (10/55)
+## Exploring Postgres (10/30)
 
 Note: We are learning this to be able to read it. We'll look stuff up when we want to write it!
 
@@ -170,9 +170,9 @@ In short:
 - Uppercasing!
 - [Ye olde style guide](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
-## BREAK (10/65)
+## BREAK (10/40)
 
-## Schema (10/75)
+## Schema (10/50)
 
 Every database (for a given program we're writing) will have one or more
 **tables**. Each table stores similar data, e.g. a `songs` table, or an
@@ -228,7 +228,7 @@ $ createdb library
 Note that this is a command-line utility that ships with Postgres, as an
 alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
 
-## You Do: Building our DB (15/90)
+## You Do: Building our DB (15/65)
 
 #### Writing our Schema
 
@@ -316,8 +316,8 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 DELETE FROM authors WHERE name = 'Adam B.';
 ```
 
-## Exercise! (15/105)
+## Exercise! (15/80)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
 
-## Break (10/115)
+## Break (10/90)
