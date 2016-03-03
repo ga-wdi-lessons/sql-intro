@@ -1,9 +1,10 @@
 # Databases
 
-This lesson is broken down into two parts:
+This lesson is broken down into three parts:
 
-1. [ERDs, Basics of Databases, and SQL](sql_basics.md)
-2. [Relationships in SQL](sql_relationships.md)
+1. [Domain Modeling & ERDs](erd_domains.md)
+2. [Basics of Databases, and SQL](sql_basics.md)
+3. [Relationships in SQL](sql_relationships.md)
 
 ## Screencasts:
 
