@@ -228,7 +228,7 @@ $ createdb library
 Note that this is a command-line utility that ships with Postgres, as an
 alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
 
-## You Do: Building our DB (15/65)
+## You Do: Building our DB (10/60)
 
 #### Writing our Schema
 
@@ -316,7 +316,7 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 DELETE FROM authors WHERE name = 'Adam B.';
 ```
 
-## Exercise! (15/80)
+## Exercise! (20/80)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
 
