@@ -219,6 +219,8 @@ We'll be using this as an example today:
 
 Note that we're writing a SQL `.sql` file.
 
+## You Do: Building our DB (10/60)
+
 #### Creating our database
 
 ```bash
@@ -227,8 +229,6 @@ $ createdb library
 
 Note that this is a command-line utility that ships with Postgres, as an
 alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
-
-## You Do: Building our DB (10/60)
 
 #### Writing our Schema
 
@@ -276,6 +276,13 @@ The most common SQL commands correspond to these 4 actions:
 * SELECT -> Read / get information for rows
 * UPDATE -> Update a row
 * DELETE -> Destroy a row
+
+First, enter into the library DB:
+
+```bash
+$ psql
+$ \c library
+```
 
 ### INSERT
 
