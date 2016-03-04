@@ -1,4 +1,4 @@
-# ERDS & Databases
+# Databases
 
 ## Learning Objectives
 

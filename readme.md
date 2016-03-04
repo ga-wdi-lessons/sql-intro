@@ -1,7 +1,9 @@
 # Databases
 
 ## Learning Objectives
-- Cover ERDs, databases
+- Describe ERDs
+- Explain what databases are
+- Create a new database
 - Intro SQL basics
 
 ## Framing
