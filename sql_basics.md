@@ -8,8 +8,6 @@
 - Explain the difference between a database management system (DBMS) and a database, and name the major DBMSes
 - Explain how a DBMS, a database, and SQL relate to one another
 - Describe a database schema and how it relates to tables, rows and columns
-- List common data types used in SQL and the related field constraints
-- Describe what a SQL injection attack is
 
 ### Mechanics
 
@@ -18,16 +16,16 @@
 - Seed a PostgreSQL database with a saved SQL file
 - Execute basic SQL commands to execute CRUD actions in a database
 
-## Introduction
+## Framing (5 mins)
 
 What's the main problem with our programs right now, in terms of user
 experience?
 
 When we quit them, any data / progress is lost! Right now, we can only store
 information in memory, which is wiped when a program is quit. We definitely
-need a way to fix this...
+need a way to fix this..
 
-## Enter Databases
+## Enter Databases (5/10)
 
 A database is a tool for storing data. There are many ways to store data on a
 computer, such as writing to a text file, a binary file, etc. But databases
@@ -50,12 +48,12 @@ across multiple DBs
 **Querying** - DBs make it easy to search, sort, filter, and combine related
 data using a Query Language.
 
-Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID),
+> Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID),
 which is a set of properties that ensure data is reliably stored. You can read
 the wiki article for more info, but in short, a lot of the properties mentioned
 above make a database ACID complient.
 
-## What's a relational database?
+## What's a relational database? (10/20)
 
 The most popular type of database is a **relational** database.
 
@@ -97,8 +95,11 @@ While this is a bit technical, it's worth clarifying some terminology:
   "Not Only SQL". Store data without using tables. More like 'big buckets'.
   We'll cover these later in the course.
 
-## Exploring Postgres
+## Exploring Postgres (10/30)
 
+Note: We are learning this to be able to read it. We'll look stuff up when we want to write it!
+
+Spotlight search for Postgres
 Launch `Postgres.app` if you don't see the elephant in your menu bar.
 
 ### psql commands
@@ -114,13 +115,13 @@ help -- general help
 \h   -- help with SQL commands
 \l   -- Lists all databases
 
-CREATE DATABASE wdi7;
+CREATE DATABASE wdi8;
 # What changed?
 \l
 
 -- What happens if we don't use a semicolon?
 
-\c wdi7 -- Connect to wdi7 database
+\c wdi8 -- Connect to wdi8 database
 
 \d -- Lists all tables
 
@@ -137,23 +138,23 @@ CREATE TABLE students (
 
 SELECT * FROM students;
 
-INSERT INTO students (first_name, last_name) VALUES ('Robin', 'Thomas');
+INSERT INTO students (first_name, last_name) VALUES ('Joe', 'GZ');
 -- This won't work!
 
-INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Robin', 'Thomas', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 1', 8675309);
+INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Joe', 'GZ', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 1', 8675309);
 SELECT * FROM students;
 
-UPDATE students SET first_name = 'Robert' WHERE first_name = 'Robin';
+UPDATE students SET first_name = 'Joseph' WHERE first_name = 'Joe';
 SELECT * FROM students;
 
-DELETE FROM students WHERE first_name = 'Robin';
-DELETE FROM students WHERE first_name = 'Robert';
+DELETE FROM students WHERE first_name = 'Joe';
+DELETE FROM students WHERE first_name = 'Joseph';
 
 SELECT * FROM students;
 
 DROP TABLE students;
 
-DROP DATABASE wdi7;
+DROP DATABASE wdi8;
 
 \q --quits
 ```
@@ -169,19 +170,9 @@ In short:
 - Uppercasing!
 - [Ye olde style guide](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
-### Breakin' stuff
+## BREAK (10/40)
 
-If you forget a closing bracket or semicolon, `\q` will get you out.
-
-```
-SELECT *
-
-SELECT (
-
-\q
-```
-
-## Schema
+## Schema (10/50)
 
 Every database (for a given program we're writing) will have one or more
 **tables**. Each table stores similar data, e.g. a `songs` table, or an
@@ -202,7 +193,6 @@ Here are some common data types for SQL DBs:
 - Float
 - Text / VARCHAR
   - VARCHAR is short, TEXT is long
-  - VARCHAR is "CHARACTER VARYING"
 - NULL
 - Date
 - Time
@@ -214,9 +204,6 @@ Constraints act as limits on the data that can go in a column.
 
 - i.e. NOT NULL and UNIQUE
   - [And many more](http://www.postgresql.org/docs/8.1/static/ddl-constraints.html)
-- Why are constraints and data types different?
-  - You'd have to have INTEGERNOTNULL and INTEGER
-  - Like flags for CLI commands
 
 ### Defining a Schema
 
@@ -230,7 +217,7 @@ We'll be using this as an example today:
 
 [Library SQL Exercise](https://github.com/ga-dc/library_sql)
 
-Note that we're *NOT* writing a ruby (`.rb`) file, but a SQL `.sql` file.
+Note that we're writing a SQL `.sql` file.
 
 #### Creating our database
 
@@ -240,6 +227,8 @@ $ createdb library
 
 Note that this is a command-line utility that ships with Postgres, as an
 alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
+
+## You Do: Building our DB (15/65)
 
 #### Writing our Schema
 
@@ -276,7 +265,7 @@ Load that in so we can practice interacting with our data:
 $ psql -d library < seed.sql
 ```
 
-## Performing 'CRUD' actions with SQL
+### Performing 'CRUD' actions with SQL
 
 CRUD stands for the most basic interactions we want to have with any database,
 create, read, update, destroy (aka delete).
@@ -327,43 +316,8 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 DELETE FROM authors WHERE name = 'Adam B.';
 ```
 
-## Exercise!
+## Exercise! (15/80)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
 
-## Putting it with Ruby
-
-```ruby
-require "pg"
-connection = PG.connect(:hostaddr => "127.0.0.1", :port => 5432, :dbname => "library")
-author_results = connection.exec("SELECT * FROM authors")
-
-# results is an array of rows, each row is effectively a hash
-
-author_results.each do |author|
-  puts author["name"] + " " + author["birth_year"]
-end
-```
-
-## Security!
-
-- What security holes do you see here?
-  - Let's say I want to update the database with something a user writes into their computer...
-  - They could pretty easily make my code execute a DROP TABLE or something.
-  - SQL injection
-  - [Obligatory visual aid](images/xkcd.png)
-  - [Other obligatory visual aid](images/car.jpg)
-
-```ruby
-connection.prepare('insert_student_statement', 'INSERT INTO authors (name, nationality, birth_year) VALUES ($1, $2, $3)')
-connection.exec_prepared('insert_student_statement', [ 'Jesse Shawl', 'Mars', 2001])
-```
-
-When we get to Rails, we'll see it helps protect us from these attacks, but we
-still need to be mindful.
-
-For more info here are some article on SQL injection:
-
-* [SQLi in Rails](http://rails-sqli.org)
-* [SQL Injection (SQLi)](https://www.acunetix.com/websitesecurity/sql-injection/)
-* [SQL Injection Cheat Sheet](http://www.veracode.com/security/sql-injection)
+## Break (10/90)
