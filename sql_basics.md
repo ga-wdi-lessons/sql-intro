@@ -99,6 +99,9 @@ While this is a bit technical, it's worth clarifying some terminology:
 
 Note: We are learning this to be able to read it. We'll look stuff up when we want to write it!
 
+But there have been times GA grads need to use it (4 months later)!
+![SQL](./images/screenshot_kibble.png)
+
 Spotlight search for Postgres
 Launch `Postgres.app` if you don't see the elephant in your menu bar.
 
