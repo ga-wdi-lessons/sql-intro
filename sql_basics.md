@@ -138,17 +138,17 @@ CREATE TABLE students (
 
 SELECT * FROM students;
 
-INSERT INTO students (first_name, last_name) VALUES ('Joe', 'GZ');
+INSERT INTO students (first_name, last_name) VALUES ('Andy', 'Kim');
 -- This won't work!
 
-INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Joe', 'GZ', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 1', 8675309);
+INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Andy', 'Kim', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 7', 8675309);
 SELECT * FROM students;
 
-UPDATE students SET first_name = 'Joseph' WHERE first_name = 'Joe';
+UPDATE students SET first_name = 'Andrew' WHERE first_name = 'Andy';
 SELECT * FROM students;
 
-DELETE FROM students WHERE first_name = 'Joe';
-DELETE FROM students WHERE first_name = 'Joseph';
+DELETE FROM students WHERE first_name = 'Andy';
+DELETE FROM students WHERE first_name = 'Andrew';
 
 SELECT * FROM students;
 
@@ -205,6 +205,8 @@ Constraints act as limits on the data that can go in a column.
 - i.e. NOT NULL and UNIQUE
   - [And many more](http://www.postgresql.org/docs/8.1/static/ddl-constraints.html)
 
+[Super scary Garnet schema](https://github.com/ga-dc/garnet/blob/master/db/schema.rb) 😱
+
 ### Defining a Schema
 
 We need to define a schema for our database. It can change later on if we need
@@ -213,15 +215,18 @@ to add / remove tables or columns, but we'll start with something simple.
 Instead of typing this into psql, it's easier to save it into a file, and 'run'
 that file.
 
-We'll be using this as an example today:
-
-[Library SQL Exercise](https://github.com/ga-dc/library_sql)
 
 Note that we're writing a SQL `.sql` file.
 
 ## You Do: Building our DB (10/60)
 
+1. Clone this
+[library SQL Exercise repo](https://github.com/ga-dc/library_sql)
+2. Open it in atom
+3. Follow along with the directions below, running commands in the terminal.
+
 #### Creating our database
+
 
 ```bash
 $ createdb library
@@ -230,11 +235,9 @@ $ createdb library
 Note that this is a command-line utility that ships with Postgres, as an
 alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
 
-#### Writing our Schema
+#### Inspecting our Schema
 
-See the [schema file](https://github.com/ga-dc/library_sql/blob/master/schema.sql)
-for a final version.
-
+Look critically at each line of the provided schema.sql file. Here are some of what the rows are:
 
 - `id SERIAL PRIMARY KEY`
   - `id`: column name, how we will refer to this column

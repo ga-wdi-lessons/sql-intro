@@ -28,7 +28,7 @@ How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
 the case in the real world.)
 
-#### Option 1 - Duplicate Info (Wrong)
+#### Option 1 - Duplicate Info (Wrong :x:)
 
 **authors**
 - name
@@ -44,7 +44,7 @@ the case in the real world.)
 
 **Downside**: duplication, keeping data in sync.
 
-#### Option 2 - Array of IDs (Wrong)
+#### Option 2 - Array of IDs (Wrong :x:)
 
 **authors**
 - name
@@ -57,7 +57,7 @@ the case in the real world.)
 
 **Downside**: Parsing list, can't index (for speed!)
 
-#### Option 3 (Correct!)
+#### Option 3 (Correct! :white_check_mark:)
 
 **authors**
 - name
@@ -68,6 +68,7 @@ the case in the real world.)
 - pub_date
 - author_id
 
+![one_to_many](images/one_to_many.png)
 
 ## Joins
 
@@ -123,3 +124,5 @@ contains two foreign key columns.
 In our example, we might create a table called 'categorizations', and it would
 have a book_id and category_id. Each row would represent a specific book's
 association with a specific category.
+
+![many_to_many](images/many_to_many.png)
