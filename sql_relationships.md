@@ -1,5 +1,7 @@
 # Relationships in SQL / SQL JOINs
 
+## Learning Objectives
+
 - Define what a foreign key is
 - Describe how to represent a one-to-many relationship in SQL database
 - Explain how to represent one-to-one and many-to-many relationships in a SQL DB
@@ -8,25 +10,24 @@
 - Use JOIN to combine tables in a SELECT
 - Describe what it means for a database to be normalized
 
-## Introduction (5mins)
+## Introduction
 
-One of the key features of relational DBs is that they can represent relationships between rows in
-different tables.
+One of the key features of relational databases is that they can represent relationships between rows in different tables.
 
-Going back to our library example, we have books and authors. We want to somehow
-indicate the relationship between a book and an author (in this case, that
-relationship indicates who wrote the book). You can imagine that we'd like to
-use this information in a number of ways, such as:
+Going back to our library example, we have two tables: `books` and `authors`. Our goal now is to somehow indicate the relationship between a book and an author. In this case, that relationship indicates who wrote the book.
 
-* Getting the author information for a given book
-* Getting all books written by a given author
-* Searching for books based on attributes of the author (i.e. all books written by a Chinese author)
+You can imagine that we'd like to use this information in a number of ways, such as...
+- Getting the author information for a given book.
+- Getting all books written by a given author.
+- Searching for books based on attributes of the author (e.g., all books written by a Chinese author).
 
-## One-to-many (10/15)
+## One-to-Many (10/15)
 
 How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
 the case in the real world.)
+
+<!-- AM: Whiteboard here. -->
 
 #### Option 1 - Duplicate Info (Wrong :x:)
 
