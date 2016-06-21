@@ -21,7 +21,7 @@ You can imagine that we'd like to use this information in a number of ways, such
 - Getting all books written by a given author.
 - Searching for books based on attributes of the author (e.g., all books written by a Chinese author).
 
-## One-to-Many (10/15)
+## One-to-Many (10 minutes / 2:20)
 
 How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
@@ -39,9 +39,9 @@ the case in the real world.)
 **books**
 - title
 - pub_date
-- author_name****
-- author_nationality****
-- author_birth_year****
+- author_name
+- author_nationality
+- author_birth_year
 
 **Downside**: duplication, keeping data in sync.
 
@@ -50,7 +50,7 @@ the case in the real world.)
 **authors**
 - name
 - nationality
-- book_ids****
+- book_ids
 
 **books**
 - title
@@ -71,7 +71,7 @@ the case in the real world.)
 
 ![one_to_many](images/one_to_many.png)
 
-## Joins
+## Joins (Optional)
 
 To SELECT information on two or more tables at ones, we can use a JOIN clause.
 This will produce rows that contain information from both tables. When JOINing
@@ -80,7 +80,7 @@ two or more tables, we have to tell the database how to 'match up' the rows.
 
 This is done using the ON clause, which specifies which properties to match.
 
-### Writing SQL JOINS
+### Writing SQL JOINS (Optional)
 
 Instructor demos:
 ```sql
@@ -91,23 +91,21 @@ SELECT * FROM books JOIN authors ON books.author_id = authors.id;
 SELECT * FROM books JOIN authors ON books.author_id = authors.id WHERE authors.nationality = 'United States of America';
 ```
 
-## EXERCISE: Books/Authors (15/30)
+## You Do: Books and Authors (Optional)
 
 See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
 exercise.
 
-## Aside: Less Common Joins (5/35)
+## Aside: Less Common Joins (Optional)
 
 There are actually a number of ways to join multiple tables with `JOIN`, if
 you're really curious, check out this article:
 
 [A visual explanation of SQL Joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
+## Many-to-Many Relationships (Optional)
 
-## Many-to-Many Relationships
-
-We're not going to go in-depth with many-to-many relationships today, but I'll
-give a simple example:
+We're not going to go in-depth with many-to-many relationships today, but lets go over a simple example...
 
 Consider if we wanted to add a categories model (e.g. fiction, non-fiction,
 sci-fi, romance, etc). Books can belong to many categories (i.e. a book might be
@@ -127,3 +125,5 @@ have a book_id and category_id. Each row would represent a specific book's
 association with a specific category.
 
 ![many_to_many](images/many_to_many.png)
+
+## Closing/Questions (10 minutes)
