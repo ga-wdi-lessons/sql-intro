@@ -100,7 +100,7 @@ While this is a bit technical, it's worth clarifying some terminology...
 * **Database CLI** - A tool offered by most DBMSs that allows us to query the
   database from the command line. For PostgreSQL, we'll use `psql`.
 
-## Exploring Postgres (15 minutes  1:05)
+## Exploring Postgres (15 minutes / 1:05)
 
 Note: We are learning this to be able to read it. We'll look stuff up when we want to write it!
 
