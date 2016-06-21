@@ -2,9 +2,9 @@
 
 ## Learning Objectives
 
-- Draw an Entity Relationship Diagram (ERD) using proper notation
-- Identify and diagram a one-to-one, one-to-many, many-to-many relationship between data entities (physical/virtual)
-- Distinguish between entities & attributes (and when you should use one over the other)
+- Draw an Entity Relationship Diagram (ERD)
+- Identify and diagram one-to-one, one-to-many and many-to-many relationships between data entities
+- Distinguish between entities and attributes
 - Discuss data normalization needs and techniques
 
 ## Framing
