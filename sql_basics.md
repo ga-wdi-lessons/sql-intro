@@ -243,7 +243,7 @@ alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
 
 #### Inspecting our Schema
 
-Look critically at each line of the provided schema.sql file. Here's how one row breaks down...
+Look critically at each line of the provided `schema.sql` file. Here's how one row breaks down...
 
 `id SERIAL PRIMARY KEY`
 - `id`: column name, how we will refer to this column
@@ -261,7 +261,7 @@ $ psql -d library < schema.sql
 ```
 
 This means: "run the psql program, connect to the database called 'library',
-then run the 'schema.sql' file in that database".
+then run the `schema.sql` file in that database".
 
 #### Loading a Seed File
 
