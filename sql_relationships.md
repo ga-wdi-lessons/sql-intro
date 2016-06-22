@@ -27,8 +27,6 @@ How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
 the case in the real world.)
 
-<!-- AM: Whiteboard here. -->
-
 #### Option 1 - Duplicate Info (Wrong :x:)
 
 **authors**
