@@ -40,6 +40,14 @@ This lesson is broken down into three parts...
 2. [Basics of Databases, and SQL](sql_basics.md)
 3. [Relationships in SQL](sql_relationships.md)
 
+## Sample Quiz Questions
+
+* What is an ERD and why would we use one?
+* What is the distinctive feature of a relational database?
+* How is information stored in a relational database?
+* What are the different types of relations that exist in a relational database?
+* How do we indicate a one-to-many relationship in a database?
+
 ## Screencasts:
 
 - WDI7 (Matt Scilipoti): [Part 1](https://youtu.be/cuPXKDMEhKw), [Part 2](https://youtu.be/wQtBDerdyKw)

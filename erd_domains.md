@@ -15,14 +15,7 @@ required to support those user stories.  We refer to this as the Domain, or
 Domain Model. The Domain Model specifies the data and the relationships between
 this data. We use it to decide what needs to be persisted.
 
-### Data vs. Behavior
-
-When problem modeling, we often think of things in terms of nouns and verbs.
-- The verbs are the actions we take in our code (e.g., functions, methods).
-- The nouns are the placeholders and containers we define in our code (e.g., variables, objects, arrays).
-- It's the data that we store in these "nouns" that needs to be persisted (e.g., game scores, items in a to-do list).
-
-### Domain Modeling (20 minutes / 0:20)
+## Domain Modeling (20 minutes / 0:20)
 
 Domain Modeling allows us to outline the data values that we need to persist.
 - We only consider the attributes of our data, not the behavior of our application.
