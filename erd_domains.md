@@ -36,6 +36,8 @@ structure.
 
 #### Example: An Orchard
 
+Take a minute to look through the below diagram. Note down any observations you have.
+
 ![orchard example](http://i.imgur.com/QmuMEgC.png)
 
 - The squares represent our entities and are filled with the attributes associated with our entity.

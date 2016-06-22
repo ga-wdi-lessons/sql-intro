@@ -177,6 +177,7 @@ In short...
 - All statements end in a semicolon.
 - Whitespace doesn't matter.
 - Uppercasing!
+- Always use single quotes when typing out string values.
 - [Ye olde style guide.](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
 ## BREAK (10 minutes / 1:15)
