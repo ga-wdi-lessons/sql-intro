@@ -80,7 +80,6 @@ This is done using the ON clause, which specifies which properties to match.
 
 ### Writing SQL JOINS (Optional)
 
-Instructor demos:
 ```sql
 SELECT id FROM authors where name = 'J.K. Rowling';
 SELECT * FROM books where author_id = 2;
