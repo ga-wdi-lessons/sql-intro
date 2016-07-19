@@ -69,7 +69,7 @@ ERDs get more complex the larger your application becomes. Nevertheless, they ar
 
 Come up with an example ERD for an application that manages a library.
 
-#### You DO: ERD's for web pages you use
+#### You Do: ERD's for web pages in the wild
 
 - amazon
 - facebook
