@@ -68,3 +68,12 @@ ERDs get more complex the larger your application becomes. Nevertheless, they ar
 > 10 minutes exercise. 5 minutes review.
 
 Come up with an example ERD for an application that manages a library.
+
+#### You DO: ERD's for web pages you use
+
+- amazon
+- facebook
+- reddit
+- espn
+- twitter
+- craigslist
