@@ -24,7 +24,7 @@ need a way to fix this.
 
 Enter databases...
 
-## Databases (5 minutes / 0:40)
+## Databases (5 minutes / 1:00)
 
 A database is a tool for storing data. There are many ways to store data on a computer (e.g., writing to a text file, a binary file). Databases, however, offer a number of advantages...
 
@@ -42,7 +42,7 @@ won't be lost (unless the server catches on fire).
 > Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID), which is a set of properties that ensure data is reliably stored. You can read the wiki article for more info but, in short, a lot of the properties mentioned
 above make a database ACID-compliant.
 
-## What's a Relational Database? (10 minutes / 0:50)
+## What's a Relational Database? (10 minutes / 1:10)
 
 The most popular type of database is a **relational** database. How do they work?
 
@@ -80,7 +80,7 @@ While this is a bit technical, it's worth clarifying some terminology...
 * **Database Management System**: The software that lets a user interact (query) the data in a database. Examples are PostgreSQL, MySQL, MongoDB, etc.
 * **Database CLI**: A tool offered by most DBMSs that allows us to query the database from the command line. For PostgreSQL, we'll use `psql`.
 
-## Exploring Postgres (15 minutes / 1:05)
+## Exploring Postgres (15 minutes / 1:25)
 
 We are learning in order to be able to read it. We'll look stuff up when we want to write it.
 
@@ -157,9 +157,7 @@ In short...
 - Always use single quotes when typing out string values.
 - [Ye olde style guide.](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
-## Break (10 minutes / 1:15)
-
-## Schema (10 minutes / 1:25)
+## Schema (10 minutes / 1:35)
 
 Every application's database will have one or more tables. You will recall, each table stores information about a particular model (e.g., `artists`, `songs`).
 
@@ -201,7 +199,7 @@ Next we're going to build a schema for a database in a sample application. It ca
 
 Instead of typing this into psql, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
 
-## You Do: Building Our Database (15 minutes / 1:40)
+## You Do: Building Our Database (15 minutes / 1:50)
 
 > 10 minutes exercise. 5 minutes review.
 
@@ -308,8 +306,6 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 DELETE FROM authors WHERE name = 'Adam B.';
 ```
 
-## Exercise! (20 minutes / 2:00)
+## Exercise! (20 minutes / 2:10)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
-
-## Break (10 minutes / 2:10)
