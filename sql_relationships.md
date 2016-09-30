@@ -41,7 +41,12 @@ the case in the real world.)
 - author_nationality
 - author_birth_year
 
-**Downside**: duplication, keeping data in sync.
+<details>
+  <summary><strong>What's the problem here?</strong></summary>
+
+  > Duplication, difficult to keep data in sync.
+
+</details>
 
 #### Option 2 - Array of IDs (Wrong :x:)
 
@@ -54,7 +59,12 @@ the case in the real world.)
 - title
 - pub_date
 
-**Downside**: Parsing list, can't index (for speed!)
+<details>
+  <summary><strong>What's the problem here?</strong></summary>
+
+  > Parsing list, can't index (for speed!)
+
+</details>
 
 #### Option 3 (Correct! :white_check_mark:)
 
@@ -69,7 +79,14 @@ the case in the real world.)
 
 ![one_to_many](images/one_to_many.png)
 
-## Joins (Optional)
+## You Do: Books and Authors (Optional)
+
+See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
+exercise.
+
+------
+
+## Bonus: Joins
 
 To SELECT information on two or more tables at ones, we can use a JOIN clause.
 This will produce rows that contain information from both tables. When JOINing
@@ -78,7 +95,7 @@ two or more tables, we have to tell the database how to 'match up' the rows.
 
 This is done using the ON clause, which specifies which properties to match.
 
-### Writing SQL JOINS (Optional)
+### Writing SQL JOINS
 
 ```sql
 SELECT id FROM authors where name = 'J.K. Rowling';
@@ -88,19 +105,14 @@ SELECT * FROM books JOIN authors ON books.author_id = authors.id;
 SELECT * FROM books JOIN authors ON books.author_id = authors.id WHERE authors.nationality = 'United States of America';
 ```
 
-## You Do: Books and Authors (Optional)
-
-See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
-exercise.
-
-## Aside: Less Common Joins (Optional)
+## Aside: Less Common Joins
 
 There are actually a number of ways to join multiple tables with `JOIN`, if
 you're really curious, check out this article:
 
 [A visual explanation of SQL Joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
-## Many-to-Many Relationships (Optional)
+## Bonus: Many-to-Many Relationships
 
 We're not going to go in-depth with many-to-many relationships today, but lets go over a simple example...
 
