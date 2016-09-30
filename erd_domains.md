@@ -9,11 +9,7 @@
 
 ## Framing
 
-User stories clarify the features we need for a good user experience. We use
-them to prioritize order and scope. Today, we will identify the information
-required to support those user stories.  We refer to this as the Domain, or
-Domain Model. The Domain Model specifies the data and the relationships between
-this data. We use it to decide what needs to be persisted.
+User stories clarify the features we need for a good user experience. We use them to prioritize order and scope. Today, we will identify the information required to support those user stories.  We refer to this as the Domain, or Domain Model. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
 
 ## Domain Modeling (20 minutes / 0:20)
 
@@ -28,13 +24,11 @@ The big takeaway here is that domain modeling **does not describe solutions to t
 
 ### ERDs
 
-An ERD -- or "Entity Relationship Diagram" -- is a tool we use to visualize and describe the data relating to the
-major entities that will exist in out programs.
-- Ultimately lends itself to planning out and creating our database table
-structure.
-- Again, we keep our data separate from our behavior.
+An ERD -- or **Entity Relationship Diagram** -- is a tool we use to visualize and describe the data relating to the major entities that will exist in out programs.
+- Ultimately lends itself to planning out and creating our database table structure.
+- It allows us to outline the data in our application. Not the behavior.
 
-#### Example: An Orchard
+### Example: An Orchard
 
 Take a minute to look through the below diagram. Note down any observations you have.
 
@@ -43,7 +37,7 @@ Take a minute to look through the below diagram. Note down any observations you 
 - The squares represent our entities and are filled with the attributes associated with our entity.
 - The arrows between the squares indicate how the entities relate to one another.
 
-##### Relationships
+### Relationships
 
 ![relationships](images/sample-relationships.png)
 
@@ -57,23 +51,23 @@ Take a minute to look through the below diagram. Note down any observations you 
 **Many-to-many:** A Membership has many Assignments through Submissions, and an Assignment has many Memberships through Submissions.
 - Requires a join table. In this example, that is Submissions.
 
-#### Example: Garnet
+### Example: Garnet
 
 ![garnet_erd](images/Garnet_ERD.png)
 
 ERDs get more complex the larger your application becomes. Nevertheless, they are still a useful tool when planning and developing. The instructors reference this diagram all the time!
 
-#### You Do: Library ERD Example (15 minutes / 0:35)
+### You Do: Library ERD (15 minutes / 0:35)
 
 > 10 minutes exercise. 5 minutes review.
 
 Come up with an example ERD for an application that manages a library.
 
-#### You Do: ERD's for web pages in the wild
+#### You Do: ERD's for Web Pages in the Wild
 
-- amazon
-- facebook
-- reddit
-- espn
-- twitter
-- craigslist
+- Amazon
+- Facebook
+- Reddit
+- ESPN
+- Twitter
+- Craigslist

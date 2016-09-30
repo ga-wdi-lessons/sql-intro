@@ -20,41 +20,29 @@ experience?
 
 When we quit them, any data / progress is lost! Right now, we can only store
 information in memory, which is wiped when a program is quit. We definitely
-need a way to fix this..
+need a way to fix this.
 
-## Enter Databases (5 minutes / 0:40)
+Enter databases...
 
-A database is a tool for storing data. There are many ways to store data on a
-computer (e.g., writing to a text file, a binary file). Databases, however,
-offer a number of advantages:
+## Databases (5 minutes / 0:40)
 
-**Permanence** - Once we write data to our database, we can be pretty sure it
+A database is a tool for storing data. There are many ways to store data on a computer (e.g., writing to a text file, a binary file). Databases, however, offer a number of advantages...
+
+**Permanence**: Once we write data to our database, we can be pretty sure it
 won't be lost (unless the server catches on fire).
 
-**Speed** - Databases are generally optimized to be fast at retrieving and
-updating information. Literally, DBs can be 100,000x faster than
-reading from a file.
+**Speed**: Databases are generally optimized to be fast at retrieving and updating information. Literally, DBs can be 100,000x faster than reading from a file.
 
-<!-- AM: Any additional information that can be provided re: speed that would count towards industry experience? -->
+**Consistency** - Databases can enforce rules regarding consistency of data, especially when handling simultaneous requests to update information.
 
-**Consistency** - Databases can enforce rules regarding consistency of data,
-especially when handling simultaneous requests to update information.
+**Scalability** - Databases can lots of requests per second, and many DBs have ways to scale to massive loads by replicating / syncing information across multiple DBs.
 
-**Scalability** - Databases can lots of requests per second, and many
-DBs have ways to scale to massive loads by replicating / syncing information
-across multiple DBs.
+**Querying** - DBs make it easy to search, sort, filter and combine related data using a Query Language.
 
-**Querying** - DBs make it easy to search, sort, filter and combine related
-data using a Query Language.
-
-> Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID),
-which is a set of properties that ensure data is reliably stored. You can read
-the wiki article for more info but, in short, a lot of the properties mentioned
+> Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID), which is a set of properties that ensure data is reliably stored. You can read the wiki article for more info but, in short, a lot of the properties mentioned
 above make a database ACID-compliant.
 
 ## What's a Relational Database? (10 minutes / 0:50)
-
-<!-- AM: Whiteboard a table(s) during this section. -->
 
 The most popular type of database is a **relational** database. How do they work?
 
@@ -77,44 +65,34 @@ The most popular type of database is a **relational** database. How do they work
 
 ### Types of Relational Databases
 
-There are lots of relational databases, such as PostgreSQL, MySQL, and SQLite.
-They are all similar in that they use SQL, but they do have different features.
+There are lots of relational databases, such as PostgreSQL, MySQL and SQLite. They are all similar in that they use SQL, but they do have different features.
 
-MySQL claims to be "the most popular open-source database," while PostgreSQL
-claims in response to be "the most advanced open-source database". It's true
-that in most tests, Postgres comes out ahead in terms of speed and has many
-features MySQL lacks, such as true full-text search and handling geo-data.
+MySQL claims to be "the most popular open-source database," while PostgreSQL claims in response to be "the most advanced open-source database". It's true that in most tests, Postgres comes out ahead in terms of speed and has many features MySQL lacks, such as true full-text search and handling geo-data.
 
-If you're interested in pros and cons, check out this [article comparing MySQL,
-Postgres, and SQLite](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems).
+> If you're interested in pros and cons, check out this [article comparing MySQL, Postgres, and SQLite](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems).
 
 ### Terminology
 
 While this is a bit technical, it's worth clarifying some terminology...
 
-* **Database** - The actual set of data being stored. We may create multiple
-  databases on our computer, usually one for each application.
-* **Database Language** - The language used to interact with a database. With relational databases, that is SQL.
-* **Database Management System** - The software that lets a user interact (query)
-  the data in a database. Examples are PostgreSQL, MySQL, MongoDB, etc.
-* **Database CLI** - A tool offered by most DBMSs that allows us to query the
-  database from the command line. For PostgreSQL, we'll use `psql`.
+* **Database**: The actual set of data being stored. We may create multiple databases on our computer, usually one for each application.
+* **Database Language**: The language used to interact with a database. With relational databases, that is SQL.
+* **Database Management System**: The software that lets a user interact (query) the data in a database. Examples are PostgreSQL, MySQL, MongoDB, etc.
+* **Database CLI**: A tool offered by most DBMSs that allows us to query the database from the command line. For PostgreSQL, we'll use `psql`.
 
 ## Exploring Postgres (15 minutes / 1:05)
 
-Note: We are learning this to be able to read it. We'll look stuff up when we want to write it!
+We are learning in order to be able to read it. We'll look stuff up when we want to write it.
 
-But there have been times GA grads need to use it (4 months later)!
+But there have been times GA grads need to use it!
+
 ![SQL](./images/screenshot_kibble.png)
 
-Start by spotlight searching (`command-space`) for Postgres and launching `Postgres.app`. Once you see the elephant in your Mac menu bar, you'll know Postgres is running.
+Start by "spotlight searching" (`command-space`) for Postgres and launching `Postgres.app`. Once you see the elephant in your Mac menu bar, you'll know Postgres is running.
 
 ### psql commands
 
-<!-- AM: Where exactly are databases stored locally? -->
-
-We'll use `psql` as our primary means of interacting with our databases. Later
-on we'll use ruby or server-side JS programs to do so in our programs.
+We'll use `psql` as our primary means of interacting with our databases. Later on we'll use ruby or server-side JS programs to do so in our programs.
 
 Here's a quick demo. Following along is optional.
 
@@ -124,13 +102,10 @@ help -- general help
 \h   -- help with SQL commands
 \l   -- Lists all databases
 
-CREATE DATABASE wdi8;
-# What changed?
-\l
+CREATE DATABASE wdi12; -- Don't forget the semicolon!
+\l -- What changed?
 
--- What happens if we don't use a semicolon?
-
-\c wdi8 -- Connect to wdi8 database
+\c wdi12 -- Connect to wdi8 database
 
 \d -- Lists all tables
 
@@ -141,7 +116,7 @@ CREATE TABLE students (
   quote TEXT,
   birthday VARCHAR,
   ssn INT NOT NULL UNIQUE
-);
+); -- Here we are defining a schema. More on this in just a bit...
 
 \d
 
@@ -161,7 +136,7 @@ DELETE FROM students WHERE first_name = 'Andrew';
 
 SELECT * FROM students;
 
-DROP TABLE students;
+DROP TABLE students; -- "drop" means to delete an entire table or database
 
 DROP DATABASE wdi8;
 
@@ -172,6 +147,8 @@ In short...
 - Backslash commands (e.g. `\l` ) are commands to navigate psql. These are psql-specific.
 - Everything else is SQL. The SQL is what actually interacts with the database.
 
+> If you're curious as to where exactly your databases are being stored locally, enter `SHOW data_directory;` while in psql.
+
 ### SQL Syntax
 
 - All statements end in a semicolon.
@@ -180,7 +157,7 @@ In short...
 - Always use single quotes when typing out string values.
 - [Ye olde style guide.](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
-## BREAK (10 minutes / 1:15)
+## Break (10 minutes / 1:15)
 
 ## Schema (10 minutes / 1:25)
 
@@ -224,13 +201,13 @@ Next we're going to build a schema for a database in a sample application. It ca
 
 Instead of typing this into psql, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
 
-## You Do: Building Our DB (15 minutes / 1:40)
+## You Do: Building Our Database (15 minutes / 1:40)
 
 > 10 minutes exercise. 5 minutes review.
 
 1. Clone this
-[library SQL Exercise repo](https://github.com/ga-wdi-exercises/library_sql)
-2. Open it in atom.
+[library SQL Exercise repo](https://github.com/ga-wdi-exercises/library_sql).
+2. Open it in Atom.
 3. Follow along with the directions below, running commands in the terminal.
 
 #### Creating our Database
@@ -239,8 +216,7 @@ Instead of typing this into psql, we're going to do so by saving the schema to a
 $ createdb library
 ```
 
-Note that this is a command-line utility that ships with Postgres, as an
-alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
+Note that this is a command-line utility that ships with Postgres, as an alternate to using the SQL command `CREATE DATABASE library;` inside `psql`.
 
 #### Inspecting our Schema
 
@@ -253,7 +229,7 @@ Look critically at each line of the provided `schema.sql` file. Here's how one r
 
 Take a few minutes to research the other rows.
 
-#### Loading our Schema
+#### Loading Our Schema
 
 To load our schema, we need to run our `schema.sql` file via the Terminal...
 
@@ -261,12 +237,11 @@ To load our schema, we need to run our `schema.sql` file via the Terminal...
 $ psql -d library < schema.sql
 ```
 
-This means: "run the psql program, connect to the database called 'library',
-then run the `schema.sql` file in that database".
+This means: "run the psql program, connect to the database called 'library', then run the `schema.sql` file in that database".
 
 #### Loading a Seed File
 
-I've provided a sql file that adds sample data into our `library` database.
+We've provided a sql file that adds sample data into our `library` database.
 
 Load that in so we can practice interacting with our data:
 
@@ -278,8 +253,7 @@ $ psql -d library < seed.sql
 
 ## Performing CRUD actions with SQL
 
-CRUD stands for the most basic interactions we want to have with any database:
-Create, Read, Update and Destroy.
+CRUD stands for the most basic interactions we want to have with any database: **Create, Read, Update and Destroy**.
 
 The most common SQL commands correspond to these 4 actions...
 
