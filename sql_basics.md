@@ -247,8 +247,6 @@ Load that in so we can practice interacting with our data:
 $ psql -d library < seed.sql
 ```
 
-<!-- AM: Is this where the "Building Our DB" exercise ends? -->
-
 ## Performing CRUD actions with SQL
 
 CRUD stands for the most basic interactions we want to have with any database: **Create, Read, Update and Destroy**.
