@@ -4,7 +4,7 @@
 
 **Concepts**
 - Explain what a database is and why you would use one
-- Explain how a DBMS, a database, and SQL relate to one another
+- Explain how a DBMS, a database and SQL relate to one another
 - Describe a database schema and how it relates to tables, rows and columns
 
 **Mechanics**
@@ -15,11 +15,11 @@
 
 ## Framing
 
-What's the main problem with our programs right now, in terms of user
+What's the main problem with our programs right now in terms of user
 experience?
 
 When we quit them, any data / progress is lost! Right now, we can only store
-information in memory, which is wiped when a program is quit. We definitely
+information in memory, which is wiped when we quit out of a program. We
 need a way to fix this.
 
 Enter databases...
@@ -33,39 +33,39 @@ won't be lost (unless the server catches on fire).
 
 **Speed**: Databases are generally optimized to be fast at retrieving and updating information. Literally, DBs can be 100,000x faster than reading from a file.
 
-**Consistency** - Databases can enforce rules regarding consistency of data, especially when handling simultaneous requests to update information.
+**Consistency**: Databases can enforce rules regarding consistency of data, especially when handling simultaneous requests to update information.
 
-**Scalability** - Databases can lots of requests per second, and many DBs have ways to scale to massive loads by replicating / syncing information across multiple DBs.
+**Scalability**: Databases can handle lots of requests per second, and many DBs have ways to scale to massive loads by replicating / syncing information across multiple DBs.
 
-**Querying** - DBs make it easy to search, sort, filter and combine related data using a Query Language.
+**Querying**: DBs make it easy to search, sort, filter and combine related data using a **Query Language**.
 
-> Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID), which is a set of properties that ensure data is reliably stored. You can read the wiki article for more info but, in short, a lot of the properties mentioned
-above make a database ACID-compliant.
+> Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID), which is a set of properties that ensure data is reliably stored. You can read the wiki article for more info but, in short, a lot of the properties mentioned above make a database ACID-compliant.
 
 ## What's a Relational Database? (10 minutes / 1:10)
+
+<!-- AM: Make sure to diagram as we go through this section. -->
 
 The most popular type of database is a **relational** database. How do they work?
 
 **Data is stored in tables.**
-- These tables are organized by columns and rows, much like a spreadsheet.
-- Tables are named according to what they model (e.g., `artists`, `songs`).
-- In the case of `artists`, each row represents one artist.
-- Each column is called an **attribute** or **field**, such as `id`, `title`,
-  `birth_year`.
+- These tables are organized by columns and rows, much like a spreadsheet
+- Tables are named according to what they model (e.g., `artists`, `songs`)
+- In the case of `artists`, each row represents one artist
+- Each column is called an **attribute** or **field**, such as `id`, `title` or `birth_year`
 
 **Communicate via SQL (Structured Query Language)**
-- SQL is a database language used specifically for relational databases.
-- This is in contrast to non-relational databases, which we will use later in the course.
+- SQL is a database language used specifically for relational databases
+- This is in contrast to non-relational databases, which we will use later in the course
 
 **Can relate data between tables**
-- Hence the name *relational* database.
-- We can relate rows in the `songs` table to rows in the `artists` table.
-- We use a `key` to do this, which is a field that is unique for each row in a table.
-- The key is often represented using an `id`, which is a unique identifier for each entry in a table.
+- Hence the name *relational* database
+- We can relate rows in the `songs` table to rows in the `artists` table
+- We use a `key` to do this, which is a field that is unique for each row in a table
+- The key is often represented using an `id`, which is a unique identifier for each entry in a table
 
 ### Types of Relational Databases
 
-There are lots of relational databases, such as PostgreSQL, MySQL and SQLite. They are all similar in that they use SQL, but they do have different features.
+There are lots of relational databases, such as **PostgreSQL**, **MySQL** and **SQLite**. They are all similar in that they use SQL, but they do have different features.
 
 MySQL claims to be "the most popular open-source database," while PostgreSQL claims in response to be "the most advanced open-source database". It's true that in most tests, Postgres comes out ahead in terms of speed and has many features MySQL lacks, such as true full-text search and handling geo-data.
 
@@ -92,7 +92,7 @@ Start by "spotlight searching" (`command-space`) for Postgres and launching `Pos
 
 ### psql commands
 
-We'll use `psql` as our primary means of interacting with our databases. Later on we'll use ruby or server-side JS programs to do so in our programs.
+We'll use `psql` as our primary means of interacting with our databases. Later on we'll use Ruby or server-side Javascript to do so in our programs.
 
 Here's a quick demo. Following along is optional.
 
@@ -151,11 +151,11 @@ In short...
 
 ### SQL Syntax
 
-- All statements end in a semicolon.
-- Whitespace doesn't matter.
-- Uppercasing!
-- Always use single quotes when typing out string values.
-- [Ye olde style guide.](http://leshazlewood.com/software-engineering/sql-style-guide/)
+- All statements end in a semicolon
+- Whitespace doesn't matter
+- Uppercasing
+- Always use single quotes when typing out string values
+- [Ye olde style guide](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
 ## Schema (10 minutes / 1:35)
 
@@ -163,13 +163,13 @@ Every application's database will have one or more tables. You will recall, each
 
 Each table has a **schema**, which defines what columns it has. For each column the schema defines...
 
-- The column's name.
-- the column's data type.
-- Any constraints for that column.
+- The column's name
+- the column's data type
+- Any constraints for that column
 
 ### Common Data Types
 
-Here are some common data types for SQL DBs. They are all, for the most part, things you've seen before...
+Here are some common data types for SQL databases. They are all, for the most part, things you've seen before...
 
 - Boolean
 - Integer
@@ -185,7 +185,7 @@ Here are some common data types for SQL DBs. They are all, for the most part, th
 ### Constraints
 
 Constraints act as limits on the data that can go in a column.
-- e.g., `NOT NULL` and `UNIQUE`.
+- e.g., `NOT NULL` and `UNIQUE`
 
 > [And many more...](http://www.postgresql.org/docs/8.1/static/ddl-constraints.html)
 
@@ -197,9 +197,11 @@ Constraints act as limits on the data that can go in a column.
 
 Next we're going to build a schema for a database in a sample application. It can change later on if we need to add / remove tables or columns, but we'll start with something simple.
 
-Instead of typing this into psql, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
+Instead of typing this into `psql`, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
 
 ## You Do: Building Our Database (15 minutes / 1:50)
+
+<!-- AM: Should they follow the instructions in the lesson plan or in the Library SQL repo? -->
 
 > 10 minutes exercise. 5 minutes review.
 
@@ -208,7 +210,7 @@ Instead of typing this into psql, we're going to do so by saving the schema to a
 2. Open it in Atom.
 3. Follow along with the directions below, running commands in the terminal.
 
-#### Creating our Database
+#### Creating Our Database
 
 ```bash
 $ createdb library
@@ -220,10 +222,10 @@ Note that this is a command-line utility that ships with Postgres, as an alterna
 
 Look critically at each line of the provided `schema.sql` file. Here's how one row breaks down...
 
-`id SERIAL PRIMARY KEY`
+**`id SERIAL PRIMARY KEY`**
 - `id`: column name, how we will refer to this column
-- `SERIAL` is the data type (similar to integer or string).  It's a special datatype for unique identifier columns, which the db auto-increments.
-- `PRIMARY KEY`: a special constraint which indicates a unique identifier for each row.
+- `SERIAL`: the data type (similar to integer or string). It's a special datatype for unique identifier columns, which the db auto-increments.
+- `PRIMARY KEY`: a special constraint which indicates a unique identifier for each row
 
 Take a few minutes to research the other rows.
 
@@ -304,6 +306,8 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 DELETE FROM authors WHERE name = 'Adam B.';
 ```
 
-## Exercise! (20 minutes / 2:10)
+> **End of `You Do: Building Our Database`**
+
+## You Do: Basic SQL Queries (20 minutes / 2:10)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
