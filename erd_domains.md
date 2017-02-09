@@ -9,9 +9,15 @@
 
 ## Framing
 
-<!-- AM: Do they know what user stories are? Either way, feel like there's a better way to frame this... -->
+Developers employ **user stories** clarify the features we need for a good user experience. What is a user story?
 
-User stories clarify the features we need for a good user experience. We use them to prioritize order and scope. Today, we will identify the information required to support those user stories.  We refer to this as the **Domain** or **Domain Model**. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
+> User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. They typically follow a simple template:
+>
+> As a <type of user>, I want <some goal> so that <some reason>.
+>
+> Source: [Mountain Goat Software](https://www.mountaingoatsoftware.com/agile/user-stories)
+
+We use them to prioritize order and scope. Today, we will identify the information required to support those user stories.  We refer to this as the **Domain** or **Domain Model**. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
 
 ## Domain Modeling (20 minutes / 0:20)
 
