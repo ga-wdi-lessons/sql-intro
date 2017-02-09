@@ -203,7 +203,7 @@ Instead of typing this into `psql`, we're going to do so by saving the schema to
 
 > 15 minutes exercise. 5 minutes review.
 
-1. Clone down and follow the instructions in the
+Clone down and follow the instructions in the
 [library SQL Exercise repo](https://github.com/ga-wdi-exercises/library_sql).
 
 ## You Do: Basic SQL Queries (20 minutes / 2:15)
