@@ -38,8 +38,6 @@ An ERD -- or **Entity Relationship Diagram** -- is a tool we use to visualize an
 
 ### Example: An Orchard
 
-<!-- AM: Should identify specific things for them to look for -- not just "observations" -->
-
 Take a minute to look through the below diagram. Note down any observations you have.
 
 ![orchard example](images/orchard.png)
