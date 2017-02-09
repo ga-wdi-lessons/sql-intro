@@ -13,7 +13,7 @@
 
 **Concepts**
 - Explain what a database is and why you would use one
-- Explain how a DBMS, a database, and SQL relate to one another
+- Explain how a database, a database management system (DBMS) and SQL relate to one another
 - Describe a database schema and how it relates to tables, rows and columns
 
 **Mechanics**

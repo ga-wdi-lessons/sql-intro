@@ -9,24 +9,32 @@
 
 ## Framing
 
-User stories clarify the features we need for a good user experience. We use them to prioritize order and scope. Today, we will identify the information required to support those user stories.  We refer to this as the Domain, or Domain Model. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
+Developers employ **user stories** clarify the features we need for a good user experience. What is a user story?
+
+> User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. They typically follow a simple template:
+>
+> As a <type of user>, I want <some goal> so that <some reason>.
+>
+> Source: [Mountain Goat Software](https://www.mountaingoatsoftware.com/agile/user-stories)
+
+We use them to prioritize order and scope. Today, we will identify the information required to support those user stories.  We refer to this as the **Domain** or **Domain Model**. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
 
 ## Domain Modeling (20 minutes / 0:20)
 
 Domain Modeling allows us to outline the data values that we need to persist.
-- We only consider the attributes of our data, not the behavior of our application.
+- We only consider the attributes of our data, not the behavior of our application
 - A domain model in problem solving and software engineering is a conceptual
-model of all the items/topics related to a specific problem.
+model of all items and topics related to a specific problem
 - It describes the various entities, their attributes, roles and relationships,
-plus the constraints that govern the problem domain.
+plus the constraints that govern the problem domain
 
 The big takeaway here is that domain modeling **does not describe solutions to the problem**. Instead, it defines how our data is structured.
 
 ### ERDs
 
 An ERD -- or **Entity Relationship Diagram** -- is a tool we use to visualize and describe the data relating to the major entities that will exist in out programs.
-- Ultimately lends itself to planning out and creating our database table structure.
-- It allows us to outline the data in our application. Not the behavior.
+- Ultimately lends itself to planning out and creating our database table structure
+- It allows us to outline the data in our application, not the behavior
 
 ### Example: An Orchard
 
