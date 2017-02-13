@@ -32,7 +32,7 @@ The big takeaway here is that domain modeling **does not describe solutions to t
 
 ### ERDs
 
-An ERD -- or **Entity Relationship Diagram** -- is a tool we use to visualize and describe the data relating to the major entities that will exist in out programs.
+An ERD -- or **Entity Relationship Diagram** -- is a tool we use to visualize and describe the data relating to the major entities that will exist in our programs.
 - Ultimately lends itself to planning out and creating our database table structure
 - It allows us to outline the data in our application, not the behavior
 
