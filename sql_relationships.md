@@ -79,12 +79,6 @@ the case in the real world.)
 
 ![one_to_many](images/one_to_many.png)
 
-## You Do: Books and Authors (Optional)
-
-See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
-exercise.
-
-------
 
 ## Bonus: Joins
 
@@ -104,6 +98,11 @@ SELECT * FROM books where author_id = 2;
 SELECT * FROM books JOIN authors ON books.author_id = authors.id;
 SELECT * FROM books JOIN authors ON books.author_id = authors.id WHERE authors.nationality = 'United States of America';
 ```
+
+## You Do: Books and Authors (Optional)
+
+See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
+exercise.
 
 ## Aside: Less Common Joins
 
