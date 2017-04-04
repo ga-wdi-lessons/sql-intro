@@ -78,9 +78,9 @@ Come up with an example ERD for an application that manages a library.
 Now do the same thing, this time for a real world application. Make an ERD for the option that matches your group number below...
 
 1. Amazon
-- Facebook
-- Reddit
-- ESPN
-- Twitter
+2. Facebook
+3. Reddit
+4. ESPN
+5. Twitter
 
 ## Break (10 minutes / 0:55)
