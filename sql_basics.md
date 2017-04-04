@@ -102,10 +102,10 @@ help -- general help
 \h   -- help with SQL commands
 \l   -- Lists all databases
 
-CREATE DATABASE wdi12; -- Don't forget the semicolon!
+CREATE DATABASE wdi15; -- Don't forget the semicolon!
 \l -- What changed?
 
-\c wdi12 -- Connect to wdi8 database
+\c wdi15 -- Connect to wdi15 database
 
 \d -- Lists all tables
 
@@ -122,10 +122,10 @@ CREATE TABLE students (
 
 SELECT * FROM students;
 
-INSERT INTO students (first_name, last_name) VALUES ('Andy', 'Kim');
+INSERT INTO students (first_name, last_name) VALUES ('Andy', 'Whitely');
 -- This won't work!
 
-INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Andy', 'Kim', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 7', 8675309);
+INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Andy', 'Whitely', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 7', 8675309);
 SELECT * FROM students;
 
 UPDATE students SET first_name = 'Andrew' WHERE first_name = 'Andy';
@@ -138,7 +138,7 @@ SELECT * FROM students;
 
 DROP TABLE students; -- "drop" means to delete an entire table or database
 
-DROP DATABASE wdi8;
+DROP DATABASE wdi15;
 
 \q --quits
 ```
