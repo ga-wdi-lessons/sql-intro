@@ -54,3 +54,11 @@ This lesson is broken down into three parts...
 
 - WDI7 (Matt Scilipoti): [Part 1](https://youtu.be/cuPXKDMEhKw), [Part 2](https://youtu.be/wQtBDerdyKw)
 - ERDs WDI7 (Matt Scilipoti): https://youtu.be/IDnOMi9jHgo
+
+## Practice
+
+- [SQL Zoo](https://sqlzoo.net/) 
+- [Code School Try SQL](https://www.codeschool.com/courses/try-sql)
+- [W3 Schools SQL tutorial](https://www.w3schools.com/sql/) 
+- [Postgres Guide](http://postgresguide.com/)
+- [SQL Course](http://www.sqlcourse.com/)
