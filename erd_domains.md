@@ -17,7 +17,7 @@ Developers employ **user stories** clarify the features we need for a good user 
 >
 > Source: [Mountain Goat Software](https://www.mountaingoatsoftware.com/agile/user-stories)
 
-We use them to prioritize order and scope. Today, we will identify the information required to support those user stories.  We refer to this as the **Domain** or **Domain Model**. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
+We use them to prioritize order and scope. Today, we will identify the information required to support those user stories. We refer to this as the **Domain** or **Domain Model**. The Domain Model specifies the data and the relationships between this data. We use it to decide what needs to be persisted.
 
 ## Domain Modeling (20 minutes / 0:20)
 

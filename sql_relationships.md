@@ -17,15 +17,15 @@ One of the key features of relational databases is that they can represent relat
 Going back to our library example, we have two tables: `books` and `authors`. Our goal now is to somehow indicate the relationship between a book and an author. In this case, that relationship indicates who wrote the book.
 
 You can imagine that we'd like to use this information in a number of ways, such as...
-- Getting the author information for a given book.
-- Getting all books written by a given author.
-- Searching for books based on attributes of the author (e.g., all books written by a Chinese author).
+- Getting the author information for a given book
+- Getting all books written by a given author
+- Searching for books based on attributes of the author (e.g., all books written by a Chinese author)
 
 ## One-to-Many (10 minutes / 2:20)
 
 How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
-the case in the real world.)
+the case in the real world).
 
 #### Option 1 - Duplicate Info (Wrong :x:)
 
@@ -79,15 +79,14 @@ the case in the real world.)
 
 ![one_to_many](images/one_to_many.png)
 
-
 ## Bonus: Joins
 
-To SELECT information on two or more tables at ones, we can use a JOIN clause.
-This will produce rows that contain information from both tables. When JOINing
-two or more tables, we have to tell the database how to 'match up' the rows.
+To `SELECT` information on two or more tables at ones, we can use a `JOIN` clause.
+This will produce rows that contain information from both tables. When joining
+two or more tables, we have to tell the database how to match up the rows.
 (e.g. to make sure the author information is correct for each book).
 
-This is done using the ON clause, which specifies which properties to match.
+This is done using the `ON` clause, which specifies which properties to match.
 
 ### Writing SQL JOINS
 
@@ -99,7 +98,7 @@ SELECT * FROM books JOIN authors ON books.author_id = authors.id;
 SELECT * FROM books JOIN authors ON books.author_id = authors.id WHERE authors.nationality = 'United States of America';
 ```
 
-## You Do: Books and Authors (Optional)
+## You Do: Books and Authors
 
 See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
 exercise.
