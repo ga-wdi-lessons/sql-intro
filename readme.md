@@ -2,27 +2,28 @@
 
 ## Learning Objectives
 
-#### Domain Modeling & ERD
+### Domain Modeling & ERD
 
 - Draw an Entity Relationship Diagram (ERD)
 - Identify and diagram one-to-one, one-to-many and many-to-many relationships between data entities
 - Distinguish between entities and attributes
 - Discuss data normalization needs and techniques
 
-#### Basics of Databases, and SQL
+### Basics of Databases, and SQL
 
-**Concepts**
+#### Concepts
+
 - Explain what a database is and why you would use one
 - Explain how a database, a database management system (DBMS) and SQL relate to one another
 - Describe a database schema and how it relates to tables, rows and columns
 
-**Mechanics**
+#### Mechanics
 - Create a new PostgreSQL database
 - Set up a PostgreSQL database schema with a saved SQL file
 - Seed a PostgreSQL database with a saved SQL file
 - Execute basic SQL commands to execute CRUD actions in a database
 
-#### Relationships in SQL / SQL JOINs
+### Relationships in SQL / SQL JOINs
 
 - Define what a foreign key is
 - Describe how to represent a one-to-many relationship in SQL database
@@ -57,8 +58,8 @@ This lesson is broken down into three parts...
 
 ## Practice
 
-- [SQL Zoo](https://sqlzoo.net/) 
+- [SQL Zoo](https://sqlzoo.net/)
 - [Code School Try SQL](https://www.codeschool.com/courses/try-sql)
-- [W3 Schools SQL tutorial](https://www.w3schools.com/sql/) 
+- [W3 Schools SQL tutorial](https://www.w3schools.com/sql/)
 - [Postgres Guide](http://postgresguide.com/)
 - [SQL Course](http://www.sqlcourse.com/)

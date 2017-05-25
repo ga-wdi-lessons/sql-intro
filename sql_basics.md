@@ -2,12 +2,14 @@
 
 ## Learning Objectives
 
-**Concepts**
+#### Concepts
+
 - Explain what a database is and why you would use one
 - Explain how a database, a database management system (DBMS) and SQL relate to one another
 - Describe a database schema and how it relates to tables, rows and columns
 
-**Mechanics**
+#### Mechanics
+
 - Create a new PostgreSQL database
 - Set up a PostgreSQL database schema with a saved SQL file
 - Seed a PostgreSQL database with a saved SQL file
@@ -42,8 +44,6 @@ won't be lost (unless the server catches on fire).
 > Note: There's an acronym in computer science [ACID](https://en.wikipedia.org/wiki/ACID), which is a set of properties that ensure data is reliably stored. You can read the wiki article for more info but, in short, a lot of the properties mentioned above make a database ACID-compliant.
 
 ## What's a Relational Database? (10 minutes / 1:10)
-
-<!-- AM: Make sure to diagram as we go through this section. -->
 
 The most popular type of database is a **relational** database. How do they work?
 
@@ -162,7 +162,6 @@ In short...
 Every application's database will have one or more tables. You will recall, each table stores information about a particular model (e.g., `artists`, `songs`).
 
 Each table has a **schema**, which defines what columns it has. For each column the schema defines...
-
 - The column's name
 - the column's data type
 - Any constraints for that column
