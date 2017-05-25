@@ -71,7 +71,7 @@ ERDs get more complex the larger your application becomes. Nevertheless, they ar
 
 Come up with an example ERD for an application that manages a library.
 
-#### You Do: ERD's for Web Pages in the Wild (15 minutes / 0:45)
+### You Do: ERD's for Web Pages in the Wild (15 minutes / 0:45)
 
 > 10 minutes. 5 minutes review.
 
