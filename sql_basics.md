@@ -188,9 +188,6 @@ Constraints act as limits on the data that can go in a column.
 
 > [And many more...](http://www.postgresql.org/docs/8.1/static/ddl-constraints.html)
 
-### Example: Garnet
-
-[Here's the super scary schema we use in Garnet.](https://github.com/ga-dc/garnet/blob/master/db/schema.rb) 😱
 
 ### Defining a Schema
 
