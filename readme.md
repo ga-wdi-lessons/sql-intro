@@ -58,6 +58,7 @@ This lesson is broken down into three parts...
 
 ## Practice
 
+- [SQL for Beginners] (https://www.codewars.com/collections/sql-for-beginners/): Created by WDI14 graduate and current GA instructor Mike Nabil.
 - [SQL Zoo](https://sqlzoo.net/)
 - [Code School Try SQL](https://www.codeschool.com/courses/try-sql)
 - [W3 Schools SQL tutorial](https://www.w3schools.com/sql/)
