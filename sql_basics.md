@@ -195,13 +195,13 @@ Next we're going to build a schema for a database in a sample application. It ca
 
 Instead of typing this into `psql`, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
 
-## You Do: Building Our Database (20 minutes / 1:55)
+## You Do: Building Our Database (15 minutes / 1:50)
 
 > 15 minutes exercise. 5 minutes review.
 
 Clone down and follow the instructions in the
 [library SQL Exercise repo](https://github.com/ga-wdi-exercises/library_sql).
 
-## You Do: Basic SQL Queries (20 minutes / 2:15)
+## You Do: Basic SQL Queries (20 minutes / 2:10)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
