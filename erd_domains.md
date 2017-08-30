@@ -59,6 +59,12 @@ Take a minute to look through the below diagram. Note down any observations you 
 **Many-to-many:** A Membership has many Assignments through Submissions, and an Assignment has many Memberships through Submissions.
 - Requires a join table. In this example, that is Submissions.
 
+#### ERD Symbols Guide
+<details>
+    <img src="./images/erd-notation.png">
+  <summary>Legend</summary>
+</details>
+
 ### Example: Garnet
 
 ![garnet_erd](images/Garnet_ERD.png)
