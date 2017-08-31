@@ -22,11 +22,9 @@ We use them to prioritize order and scope. Today, we will identify the informati
 ## Domain Modeling (20 minutes / 0:20)
 
 Domain Modeling allows us to outline the data values that we need to persist.
-- We only consider the attributes of our data, not the behavior of our application
-- A domain model in problem solving and software engineering is a conceptual
-model of all items and topics related to a specific problem
-- It describes the various entities, their attributes, roles and relationships,
-plus the constraints that govern the problem domain
+- We only consider the specific data our application needs, but not the behavior of the application
+- A domain model in problem solving and software engineering is a conceptual model of all items and topics related to a specific problem
+- It describes the various entities, their attributes, roles and relationships, plus the constraints that govern the problem domain
 
 The big takeaway here is that domain modeling **does not describe solutions to the problem**. Instead, it defines how our data is structured.
 
@@ -61,15 +59,15 @@ Take a minute to look through the below diagram. Note down any observations you 
 
 #### ERD Symbols Guide
 <details>
-    <img src="./images/erd-notation.png">
-  <summary>Legend</summary>
+  <summary> Legend </summary>
+  <img src="./images/erd-notation.png">
 </details>
 
 ### Example: Garnet
 
 ![garnet_erd](images/Garnet_ERD.png)
 
-ERDs get more complex the larger your application becomes. Nevertheless, they are still a useful tool when planning and developing. The instructors reference this diagram all the time!
+ERDs grow more complex the larger an application becomes. They are a crucial tool when planning and developing, as well as iterating on or improving an application. The instructors reference the above diagram all the time!
 
 ### You Do: Library ERD (15 minutes / 0:35)
 
@@ -87,6 +85,6 @@ Now do the same thing, this time for a real world application. Make an ERD for t
 2. Facebook
 3. Reddit
 4. ESPN
-5. Twitter
+<!-- 5. Twitter -->
 
 ## Break (10 minutes / 0:55)
